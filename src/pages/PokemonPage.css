@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .pokemon-card-detail {
@@ -55,7 +56,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ff3b3b;
+    gap: 5px;
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -64,11 +65,84 @@
     font-size: 14px;
 }
 
+.type-badge.Acier {
+    background-color: #60a2b9;
+}
+
+.type-badge.Combat {
+    background-color: #ff8100;
+}
+
+.type-badge.Dragon {
+    background-color: #4f60e2;
+}
+
+.type-badge.Eau {
+    background-color: #2481ef;
+}
+
+.type-badge.Electrique {
+    background-color: #fac100;
+}
+
+.type-badge.Fée {
+    background-color: #ef70ef;
+}
+
+.type-badge.Feu {
+    background-color: #e72324;
+}
+
+.type-badge.Glace {
+    background-color: #3dd9ff;
+}
+
+.type-badge.Insecte {
+    background-color: #92a212;
+}
+
+.type-badge.Normal {
+    background-color: #a0a2a0;
+}
+
+.type-badge.Plante {
+    background-color: #3da224;
+}
+
+.type-badge.Poison {
+    background-color: #923fcc;
+}
+
+.type-badge.Psy {
+    background-color: #ef3f7a;
+}
+
+.type-badge.Roche {
+    background-color: #b0aa82;
+}
+
+.type-badge.Sol {
+    background-color: #92501b;
+}
+
+.type-badge.Spectre {
+    background-color: #703f70;
+}
+
+.type-badge.Ténèbres {
+    background-color: #4f3f3d;
+}
+
+.type-badge.Vol {
+    background-color: #82baef;
+}
+
 .type-image {
     width: 20px;
     height: 20px;
     margin-left: 5px;
-    vertical-align: middle;
+    border-radius: 50%;
+    background-color: white;
 }
 
 

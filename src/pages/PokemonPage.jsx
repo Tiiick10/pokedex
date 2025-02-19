@@ -48,7 +48,7 @@ export default function PokemonPage() {
           {pokemon.apiTypes.map((type) => (
             <span
               key={type.name}
-              className="type-badge"
+              className={"type-badge " + type.name}
               style={{ backgroundColor: type.color }}
             >
               {type.name}
