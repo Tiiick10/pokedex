@@ -1,0 +1,52 @@
+.home-container {
+    padding: 20px;
+    min-height: 100vh;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.pokemon-card:hover {
+    animation: scanCard 1s ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scanCard {
+    0% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+}
