@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import PokemonCard from "../components/PokemonCard/PokemonCard"
 import SearchBar from "../components/SearchBar/SearchBar"
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner"
@@ -54,7 +54,10 @@ export default function Home() {
 
     <div>
 
+      <Link to="/poke-team" className="favBtn">Poké Team</Link>
+
       <h1 className="title">Pokédex</h1>
+
       <SearchBar pokemons={pokemons} setFilteredPokemons={setFilteredPokemons} />
 
       <div className="pokemon-grid">
@@ -74,6 +77,5 @@ export default function Home() {
     </div>
 
   )
-  
-}
 
+}
