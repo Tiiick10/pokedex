@@ -9,35 +9,52 @@ export default function PokemonPage() {
   const [pokemon, setPokemon] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const controller = new AbortController()
+  const [pokeTeam, setPokeTeam] = useState(() => {
+    const savedTeam = localStorage.getItem("pokeTeam")
+    return savedTeam ? JSON.parse(savedTeam) : []
+  })
 
   useEffect(() => {
     setLoading(true)
-    fetch(`https://pokebuildapi.fr/api/v1/pokemon/${id}`, {
-      signal: controller.signal,
-    })
+    fetch(`https://pokebuildapi.fr/api/v1/pokemon/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Pokémon introuvable !")
         return res.json()
       })
-
       .then((data) => {
         setPokemon(data)
       })
-
       .catch((err) => {
-        if (err.name !== "AbortError") {
-          setError(err.message)
-        }
+        setError(err.message)
       })
-
       .finally(() => setLoading(false))
   }, [id])
 
+  // Vérifie si le Pokémon est déjà dans l'équipe
+  const isInTeam = pokeTeam.some((p) => p.id === pokemon?.id)
+
+  // Ajoute ou retire le Pokémon de l'équipe
+  const togglePokemonInTeam = () => {
+    let newTeam
+
+    if (isInTeam) {
+      newTeam = pokeTeam.filter((p) => p.id !== pokemon.id)
+    } else {
+      if (pokeTeam.length < 6) {
+        newTeam = [...pokeTeam, pokemon]
+      } else {
+        alert("Votre équipe est pleine !")
+        return
+      }
+    }
+
+    setPokeTeam(newTeam)
+    localStorage.setItem("pokeTeam", JSON.stringify(newTeam))
+  }
+
   if (loading) return <LoadingSpinner />
   if (error) return <p>❌ {error}</p>
-  if (!pokemon || Object.keys(pokemon).length === 0)
-    return <p>❌ Pokémon introuvable</p>
+  if (!pokemon) return <p>❌ Pokémon introuvable</p>
 
   return (
     <div className="pokemon-page">
@@ -57,10 +74,13 @@ export default function PokemonPage() {
           ))}
         </div>
         <div className="pokemon-stats">
-          <p>❤️ Point de vie : {pokemon.stats.HP}</p>
+          <p>❤️ PV : {pokemon.stats.HP}</p>
           <p>⚔️ Attaque : {pokemon.stats.attack}</p>
           <p>🛡️ Défense : {pokemon.stats.defense}</p>
         </div>
+        <button onClick={togglePokemonInTeam} className={`team-btn ${isInTeam ? "remove" : "add"}`}>
+          {isInTeam ? "Retirer de l'équipe" : "Ajouter à l'équipe"}
+        </button>
       </div>
       <BackButton />
     </div>

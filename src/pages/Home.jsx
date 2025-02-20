@@ -4,6 +4,7 @@ import PokemonCard from "../components/PokemonCard/PokemonCard"
 import SearchBar from "../components/SearchBar/SearchBar"
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner"
 import './Home.css'
+import BackTopBtn from "../components/BackButton/BackTopBtn"
 
 const API_URL = "https://pokebuildapi.fr/api/v1/pokemon"
 
@@ -54,7 +55,7 @@ export default function Home() {
 
     <div>
 
-      <Link to="/poke-team" className="favBtn">Poké Team</Link>
+      <Link to="/poke-team" className="favBtn"><img src="src/img/pokeball-pokemon-svgrepo-com.svg" alt="" />Poké Team</Link>
 
       <h1 className="title">Pokédex</h1>
 
@@ -64,7 +65,7 @@ export default function Home() {
 
         {filteredPokemons.map((pokemon) => (
 
-          <Link key={pokemon.id} to={`/pokemon/${pokemon.id}`}>
+          <Link key={pokemon.id} to={`/pokemon/${pokemon.id}`} className="linkPokeCard">
 
             <PokemonCard pokemon={pokemon} />
 
@@ -73,6 +74,8 @@ export default function Home() {
         ))}
 
       </div>
+
+      <BackTopBtn/>
 
     </div>
 

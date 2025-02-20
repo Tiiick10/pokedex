@@ -2,7 +2,6 @@
     background-color: #ff0000;
     color: white;
     border: none;
-    padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
     border-radius: 5px;
@@ -12,4 +11,20 @@
 
 .back-button:hover {
     background-color: #d00000;
+}
+
+.pokeBack {
+    position: absolute;
+    left: 3%;
+    top: 5%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid red;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
 }

@@ -1,0 +1,41 @@
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 999;
+}
+.scroll-to-top-button.show {
+  opacity: 1;
+}
+.scroll-to-top-button .progress-circle {
+  position: relative;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 0.25em solid transparent;
+  cursor: pointer;
+  transition: border-image 0.01s ease-in-out;
+}
+.scroll-to-top-button .progress-circle:hover {
+  border-color: #ffb300;
+}
+.scroll-to-top-button .progress-circle .arrow-up {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-135deg);
+  width: 1.5em;
+  height: 1.5em;
+  border: solid #ffb300;
+  border-width: 0 0.2em 0.2em 0;
+  display: inline-block;
+  border-radius: 0.2em;
+}
+@media (max-width: 768px) {
+  .scroll-to-top-button {
+    bottom: 1em;
+    right: 1em;
+  }
+}
