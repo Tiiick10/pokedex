@@ -32,15 +32,6 @@
     font-style: italic;
 }
 
-.search-bar-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: #ff0000;
-}
-
 /* Style pour le select de région */
 
 .region-select {
@@ -55,9 +46,8 @@
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.region-select:focus {
-    border-color: #ff3b3b;
-    box-shadow: 0 4px 20px rgba(255, 59, 59, 0.3);
+.region-select:hover {
+    cursor: pointer;
 }
 
 /* Mobile */
