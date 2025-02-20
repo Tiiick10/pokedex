@@ -47,27 +47,14 @@
 }
 
 select {
-    -webkit-appearance: none; /* Pour les navigateurs basés sur WebKit (Chrome, Safari) */
-    -moz-appearance: none;    /* Pour Firefox */
-    appearance: none;         /* Pour les navigateurs modernes */
-    background: transparent;  /* Supprimer le fond par défaut */
-    border: none;             /* Supprimer la bordure par défaut */
-    padding: 10px;            /* Ajouter du padding pour plus de confort */
-    font-size: 16px;          /* Taille de la police */
-    cursor: pointer;          /* Changer le curseur en pointeur */
-}
-
-select::after {
-    content: '▼';             /* Utiliser un caractère Unicode pour la flèche */
-    position: absolute;       /* Positionner la flèche de manière absolue */
-    top: 50%;                 /* Centrer verticalement */
-    right: 10px;              /* Positionner à droite avec un peu de marge */
-    transform: translateY(-50%); /* Centrer verticalement */
-    pointer-events: none;     /* Empêcher les interactions avec la flèche */
-}
-
-.region-select:hover {
-    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;    
+    appearance: none;        
+    background: transparent;  
+    border: none;            
+    padding: 10px;            
+    font-size: 16px;         
+    cursor: pointer;     
 }
 
 /* Mobile */
