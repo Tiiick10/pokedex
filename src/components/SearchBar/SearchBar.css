@@ -48,6 +48,7 @@
 
 select .region-select {
     appearance: none;
+    -o-appearance: none;
 }
 
 .region-select:hover {
