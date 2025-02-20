@@ -46,10 +46,15 @@
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-select .region-select {
-    appearance: none;
-    -o-appearance: none;
-    background: none;
+select {
+    -webkit-appearance: none; /* Pour les navigateurs basés sur WebKit (Chrome, Safari) */
+    -moz-appearance: none;    /* Pour Firefox */
+    appearance: none;         /* Pour les navigateurs modernes */
+    background: transparent;  /* Supprimer le fond par défaut */
+    border: none;             /* Supprimer la bordure par défaut */
+    padding: 10px;            /* Ajouter du padding pour plus de confort */
+    font-size: 16px;          /* Taille de la police */
+    cursor: pointer;          /* Changer le curseur en pointeur */
 }
 
 .region-select:hover {
