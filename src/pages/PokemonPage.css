@@ -63,78 +63,79 @@
     margin: 5px;
     text-transform: capitalize;
     font-size: 14px;
+    border: 1px solid;
 }
 
 .type-badge.Acier {
-    background-color: #60a2b9;
+    border-color: #60a2b9;
 }
 
 .type-badge.Combat {
-    background-color: #ff8100;
+    border-color: #ff8100;
 }
 
 .type-badge.Dragon {
-    background-color: #4f60e2;
+    border-color: #4f60e2;
 }
 
 .type-badge.Eau {
-    background-color: #2481ef;
+    border-color: #2481ef;
 }
 
 .type-badge.Electrique {
-    background-color: #fac100;
+    border-color: #fac100;
 }
 
 .type-badge.Fée {
-    background-color: #ef70ef;
+    border-color: #ef70ef;
 }
 
 .type-badge.Feu {
-    background-color: #e72324;
+    border-color: #e72324;
 }
 
 .type-badge.Glace {
-    background-color: #3dd9ff;
+    border-color: #3dd9ff;
 }
 
 .type-badge.Insecte {
-    background-color: #92a212;
+    border-color: #92a212;
 }
 
 .type-badge.Normal {
-    background-color: #a0a2a0;
+    border-color: #a0a2a0;
 }
 
 .type-badge.Plante {
-    background-color: #3da224;
+    border-color: #3da224;
 }
 
 .type-badge.Poison {
-    background-color: #923fcc;
+    border-color: #923fcc;
 }
 
 .type-badge.Psy {
-    background-color: #ef3f7a;
+    border-color: #ef3f7a;
 }
 
 .type-badge.Roche {
-    background-color: #b0aa82;
+    border-color: #b0aa82;
 }
 
 .type-badge.Sol {
-    background-color: #92501b;
+    border-color: #92501b;
 }
 
 .type-badge.Spectre {
-    background-color: #703f70;
+    border-color: #703f70;
 }
 
 .type-badge.Ténèbres {
-    background-color: #4f3f3d;
+    border-color: #4f3f3d;
 }
 
 .type-badge.Vol {
-    background-color: #82baef;
+    border-color: #82baef;
 }
 
 .type-image {
